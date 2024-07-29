@@ -1,8 +1,8 @@
 # Dotfiles for Archcraft
 
-### 1. Install and update [Archcraft](https://archcraft.io/download.html) Make sure to install Opbenbox as the window manager
+### 1. Install and update [Archcraft](https://archcraft.io/download.html) 
 
-Instructions on how to install Archcraft [here](https://wiki.archcraft.io/docs/intro/)
+Instructions on how to install Archcraft [here](https://wiki.archcraft.io/docs/intro/) Make sure to install Opbenbox as the window manager
 
 After installing Archcraft connect your machine to internet and update it with the following command
 
