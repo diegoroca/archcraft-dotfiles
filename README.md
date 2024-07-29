@@ -1,6 +1,6 @@
 # Dotfiles for Archcraft
 
-### 1. Install and update [Archcraft](https://archcraft.io/download.html)
+### 1. Install and update [Archcraft](https://archcraft.io/download.html) Make sure to install Opbenbox as the window manager
 
 Instructions on how to install Archcraft [here](https://wiki.archcraft.io/docs/intro/)
 
@@ -26,7 +26,7 @@ sudo pacman -Sy
 
 ### 3. Install the ricing
 
-Finally you can reboot the machine and run the install script
+Finally you can reboot the machine and run the setup script
 
 ```bash
 git clone git@github.com:diegoroca/archcraft-dotfiles.git ~/.dotfiles
