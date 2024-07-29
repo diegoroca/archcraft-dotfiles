@@ -12,7 +12,7 @@ $ sudo pacman -Syyu
 
 ### 2. Configure the packages list
 
-Enable [multilib] uncommenting the `[multilib]` int the file `/etc/pacman.conf` at this point you can use `sudo vim` to easily edit the file.
+Enable [multilib] uncommenting the `[multilib]` line in the file `/etc/pacman.conf` at this point you can use `sudo vim` to easily edit the file.
 
 ```bash
 sudo vim /etc/pacman.conf
@@ -39,9 +39,9 @@ chmod +x setup.sh
 
 Google Chrome
 
-- Set google-chrome title bar to use system title bar
-- Set dns to google public dns
-- Set google to start where I left
+- Set Chrome title bar to use system title bar
+- Set DNS to google public DNS
+- Set Chrome to start where I left
 - Disable ambient mode and stable volume in youtube
 
 Steam
