@@ -12,17 +12,21 @@ sudo pacman -S --needed base-devel
 sudo pacman -S neovim
 sudo pacman -S ttf-jetbrains-mono-nerd
 sudo pacman -S arduino-cli
+sudo pacman -S screen
 sudo pacman -S texlive
 sudo pacman -S texlive-langspanish
 sudo pacman -S biber
 
 # Install packages with pacman [multilib]
 sudo pacman -Sy steam
+sudo pacman -Syu kicad
 
 # Install packages form AUR with yay
 yay -S google-chrome
 yay -S notion-app-electron
 yay -S spotify
+yay -S bambustudio-bin
+yay -S fstl
 
 # Install from other repositories
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
@@ -60,31 +64,34 @@ mv ~/.config/picom-jonaburg.conf $BACKUP_DIR/
 mv ~/.config/picom-original.conf $BACKUP_DIR/
 
 #Create symlinks
-ln -s $DOTFILES_DIR/alacritty ~/.config/alacritty
-ln -s $DOTFILES_DIR/dunst ~/.config/dunst
-ln -s $DOTFILES_DIR/galculator ~/.config/galculator
-ln -s $DOTFILES_DIR/geany ~/.config/geany
-ln -s $DOTFILES_DIR/gtk-2.0 ~/.config/gtk-2.0
-ln -s $DOTFILES_DIR/gtk-3.0 ~/.config/gtk-3.0
-ln -s $DOTFILES_DIR/Kvantum ~/.config/Kvantum
-ln -s $DOTFILES_DIR/networkmanager-dmenu ~/.config/networkmanager-dmenu
-ln -s $DOTFILES_DIR/nitrogen ~/.config/nitrogen
-ln -s $DOTFILES_DIR/nvim/lua/chadrc.lua ~/.config/nvim/lua/chadrc.lua
-ln -s $DOTFILES_DIR/obmenu-generator ~/.config/obmenu-generator
-ln -s $DOTFILES_DIR/openbox ~/.config/openbox
-ln -s $DOTFILES_DIR/qt5ct ~/.config/qt5ct
-ln -s $DOTFILES_DIR/qt6ct ~/.config/qt6ct
-ln -s $DOTFILES_DIR/ranger ~/.config/ranger
-ln -s $DOTFILES_DIR/rofi ~/.config/rofi
-ln -s $DOTFILES_DIR/Thunar ~/.config/Thunar
-ln -s $DOTFILES_DIR/viewnior ~/.config/viewnior
-ln -s $DOTFILES_DIR/xfce4 ~/.config/xfce4
-ln -s $DOTFILES_DIR/picom-ibhagwan.conf ~/.config/picom-ibhagwan.conf
-ln -s $DOTFILES_DIR/picom-jonaburg.conf ~/.config/picom-jonaburg.conf
-ln -s $DOTFILES_DIR/picom-original.conf ~/.config/picom-original.conf
+ln -s $DOTFILES_DIR/Configs/alacritty ~/.config/alacritty
+ln -s $DOTFILES_DIR/Configs/dunst ~/.config/dunst
+ln -s $DOTFILES_DIR/Configs/galculator ~/.config/galculator
+ln -s $DOTFILES_DIR/Configs/geany ~/.config/geany
+ln -s $DOTFILES_DIR/Configs/gtk-2.0 ~/.config/gtk-2.0
+ln -s $DOTFILES_DIR/Configs/gtk-3.0 ~/.config/gtk-3.0
+ln -s $DOTFILES_DIR/Configs/Kvantum ~/.config/Kvantum
+ln -s $DOTFILES_DIR/Configs/networkmanager-dmenu ~/.config/networkmanager-dmenu
+ln -s $DOTFILES_DIR/Configs/nitrogen ~/.config/nitrogen
+ln -s $DOTFILES_DIR/Configs/nvim/lua/chadrc.lua ~/.config/nvim/lua/chadrc.lua
+ln -s $DOTFILES_DIR/Configs/obmenu-generator ~/.config/obmenu-generator
+ln -s $DOTFILES_DIR/Configs/openbox ~/.config/openbox
+ln -s $DOTFILES_DIR/Configs/qt5ct ~/.config/qt5ct
+ln -s $DOTFILES_DIR/Configs/qt6ct ~/.config/qt6ct
+ln -s $DOTFILES_DIR/Configs/ranger ~/.config/ranger
+ln -s $DOTFILES_DIR/Configs/rofi ~/.config/rofi
+ln -s $DOTFILES_DIR/Configs/Thunar ~/.config/Thunar
+ln -s $DOTFILES_DIR/Configs/viewnior ~/.config/viewnior
+ln -s $DOTFILES_DIR/Configs/xfce4 ~/.config/xfce4
+ln -s $DOTFILES_DIR/Configs/picom-ibhagwan.conf ~/.config/picom-ibhagwan.conf
+ln -s $DOTFILES_DIR/Configs/picom-jonaburg.conf ~/.config/picom-jonaburg.conf
+ln -s $DOTFILES_DIR/Configs/picom-original.conf ~/.config/picom-original.conf
 
-ln -sf $DOTFILES_DIR/picom.conf ~/.config/picom.conf
+ln -sf $DOTFILES_DIR/Configs/picom.conf ~/.config/picom.conf
 
 # Final configs
 git config --global user.name "Diego Roca"
 git config --global user.email "roca.diego@icloud.com"
+git config --global init.defaultBranch "main"
+
+sudo usermod -aG uucp diego 

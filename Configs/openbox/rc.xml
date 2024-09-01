@@ -1059,7 +1059,7 @@
     <application title="MPlayer">
       <decor>no</decor>
     </application>
-    <application title="Nitrogen">
+    <application title="*">
       <position force="yes">
         <x>center</x>
         <y>center</y>
