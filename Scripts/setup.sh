@@ -3,12 +3,8 @@
 DOTFILES_DIR=~/.dotfiles
 BACKUP_DIR=~/.dotfiles_backup
 
-# Unistall packages
-sudo pacman -R plank
-sudo pacman -R firefox
-
 # Install packages with pacman
-sudo pacman -S --needed base-devel
+sudo pacman -S --needed base-devel git
 sudo pacman -S neovim
 sudo pacman -S ttf-jetbrains-mono-nerd
 sudo pacman -S arduino-cli
@@ -20,6 +16,7 @@ sudo pacman -S biber
 # Install packages with pacman [multilib]
 sudo pacman -Sy steam
 sudo pacman -Syu kicad
+sudo pacman -Syu --asdeps kicad-library
 
 # Install packages form AUR with yay
 yay -S google-chrome
@@ -31,12 +28,16 @@ yay -S fstl
 # Install from other repositories
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 
-# Move the Themes and Wallpapers to its place
-sudo cp -f ~/.dotfiles/Wallpapers/default.jpg /usr/share/backgrounds/default.jpg
-sudo cp -f ~/.dotfiles/Wallpapers/catslug.png /usr/share/backgrounds/catslug.png
+# Unistall packages
+sudo pacman -R plank
+sudo pacman -R firefox
 
-sudo cp -f ~/.dotfiles/Themes/Focaccia /usr/share/themes/Focaccia
-sudo cp -f ~/.dotfiles/Themes/Catslug /usr/share/themes/Catslug
+# Move the Themes and Wallpapers to its place
+sudo cp -rf ~/.dotfiles/Wallpapers/default.jpg /usr/share/backgrounds/default.jpg
+sudo cp -rf ~/.dotfiles/Wallpapers/catslug.png /usr/share/backgrounds/catslug.png
+
+sudo cp -rf ~/.dotfiles/Themes/Focaccia /usr/share/themes/Focaccia
+sudo cp -rf ~/.dotfiles/Themes/Catslug /usr/share/themes/Catslug
 
 #Create backup
 mkdir $BACKUP_DIR
