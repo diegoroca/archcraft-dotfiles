@@ -18,6 +18,12 @@ sudo pacman -Sy steam
 sudo pacman -Syu kicad
 sudo pacman -Syu --asdeps kicad-library
 
+# Ensure a clean installation of yay
+git clone https://aur.archlinux.org/yay-git.git ~/Documents/yay
+cd ~/Documents/yay
+makepkg -si
+cd ~
+
 # Install packages form AUR with yay
 yay -S google-chrome
 yay -S notion-app-electron
@@ -74,7 +80,6 @@ ln -s $DOTFILES_DIR/Configs/gtk-3.0 ~/.config/gtk-3.0
 ln -s $DOTFILES_DIR/Configs/Kvantum ~/.config/Kvantum
 ln -s $DOTFILES_DIR/Configs/networkmanager-dmenu ~/.config/networkmanager-dmenu
 ln -s $DOTFILES_DIR/Configs/nitrogen ~/.config/nitrogen
-ln -s $DOTFILES_DIR/Configs/nvim/lua/chadrc.lua ~/.config/nvim/lua/chadrc.lua
 ln -s $DOTFILES_DIR/Configs/obmenu-generator ~/.config/obmenu-generator
 ln -s $DOTFILES_DIR/Configs/openbox ~/.config/openbox
 ln -s $DOTFILES_DIR/Configs/qt5ct ~/.config/qt5ct
@@ -96,3 +101,6 @@ git config --global user.email "roca.diego@icloud.com"
 git config --global init.defaultBranch "main"
 
 sudo usermod -aG uucp diego 
+
+echo -e "\e[32mIt seems everything went smoothly :D\e[0m"
+echo -e "\e[32mReboot to see the changes\e[0m"
