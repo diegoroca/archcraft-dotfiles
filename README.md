@@ -29,7 +29,7 @@ sudo pacman -Sy
 Finally you can reboot the machine and run the setup script
 
 ```bash
-git clone git@github.com:diegoroca/archcraft-dotfiles.git ~/.dotfiles
+git clone https://github.com/diegoroca/archcraft-dotfiles.git ~/.dotfiles
 cd .dotfiles/Scripts
 chmod +x setup.sh
 ./setup.sh
