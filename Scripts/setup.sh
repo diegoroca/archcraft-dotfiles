@@ -24,12 +24,16 @@ cd ~/Documents/yay
 makepkg -si
 cd ~
 
-# Install packages form AUR with yay
+# Install packages from AUR with yay
 yay -S google-chrome
 yay -S notion-app-electron
 yay -S spotify
-yay -S bambustudio-bin
 yay -S fstl
+yay -S sddm-sugar-dark
+
+# Install packages from Flathub
+sudo pacman -S flatpak
+flatpak install flathub com.bambulab.BambuStudio
 
 # Install from other repositories
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
@@ -101,6 +105,8 @@ git config --global user.email "roca.diego@icloud.com"
 git config --global init.defaultBranch "main"
 
 sudo usermod -aG uucp diego 
+
+flatpak override --user --env=GTK_THEME=Adawita:dark com.bambulab.BambuStudio
 
 echo -e "\e[32mIt seems everything went smoothly :D\e[0m"
 echo -e "\e[32mReboot to see the changes\e[0m"
