@@ -34,6 +34,7 @@ yay -S sddm-sugar-dark
 # Install packages from Flathub
 sudo pacman -S flatpak
 flatpak install flathub com.bambulab.BambuStudio
+flatpak override --user --env=GTK_THEME=Adawita:dark com.bambulab.BambuStudio
 
 # Install from other repositories
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
@@ -97,17 +98,17 @@ ln -s $DOTFILES_DIR/Configs/xfce4 ~/.config/xfce4
 ln -s $DOTFILES_DIR/Configs/picom-ibhagwan.conf ~/.config/picom-ibhagwan.conf
 ln -s $DOTFILES_DIR/Configs/picom-jonaburg.conf ~/.config/picom-jonaburg.conf
 ln -s $DOTFILES_DIR/Configs/picom-original.conf ~/.config/picom-original.conf
-
 ln -sf $DOTFILES_DIR/Configs/picom.conf ~/.config/picom.conf
+ln -s $DOTFILES_DIR/Configs/betterlockscreen ~/.config/betterlockscreen
 
 # Final configs
+betterlockscreen -u ~/.dotfiles/Wallpapers/default.jpg
+
 git config --global user.name "Diego Roca"
 git config --global user.email "roca.diego@icloud.com"
 git config --global init.defaultBranch "main"
 
-sudo usermod -aG uucp diego 
-
-flatpak override --user --env=GTK_THEME=Adawita:dark com.bambulab.BambuStudio
+sudo usermod -aG uucp diego
 
 echo -e "\e[32mIt seems everything went smoothly :D\e[0m"
 echo -e "\e[32mReboot to see the changes\e[0m"
