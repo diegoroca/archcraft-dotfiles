@@ -44,10 +44,11 @@ sudo pacman -R firefox
 
 # Move the Themes and Wallpapers to its place
 sudo cp -rf ~/.dotfiles/Wallpapers/default.jpg /usr/share/backgrounds/default.jpg
-sudo cp -rf ~/.dotfiles/Wallpapers/catslug.png /usr/share/backgrounds/catslug.png
 
 sudo cp -rf ~/.dotfiles/Themes/Focaccia /usr/share/themes/Focaccia
-sudo cp -rf ~/.dotfiles/Themes/Catslug /usr/share/themes/Catslug
+
+sudo tar -xzvf ~/.dotfiles/Themes/Sddm_Candy.tar.gz -C /usr/share/sddm/themes
+sudo cp -rf ~/.dotfiles/Configs/sddm/kde_settings.conf /etc/sddm.conf.d/kde_settings.conf
 
 #Create backup
 mkdir $BACKUP_DIR
