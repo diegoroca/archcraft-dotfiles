@@ -8,6 +8,8 @@ sudo pacman -S --needed base-devel git
 sudo pacman -S neovim
 sudo pacman -S ttf-jetbrains-mono-nerd
 sudo pacman -S arduino-cli
+arduino-cli core install arduino:avr
+arduino-cli core install esp32:esp32
 sudo pacman -S screen
 sudo pacman -S texlive
 sudo pacman -S texlive-langspanish
