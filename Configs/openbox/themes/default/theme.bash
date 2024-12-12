@@ -37,7 +37,7 @@ polybar_font='JetBrains Mono:size=10;3'
 
 # Rofi
 rofi_font='JetBrainsMono Nerd Font 10'
-rofi_icon='Papirus-Apps'
+rofi_icon='WhiteSur-dark'
 
 # Terminal
 terminal_font_name='JetBrainsMono Nerd Font'
@@ -48,9 +48,9 @@ geany_colors='gruvbox.conf'
 geany_font='JetBrains Mono 10'
 
 # Appearance
-gtk_font='Sans 10'
+gtk_font='JetBrains Mono 10'
 gtk_theme='Focaccia'
-icon_theme='Zafiro'
+icon_theme='WhiteSur-dark'
 cursor_theme='Qogirr'
 
 # Openbox

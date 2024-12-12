@@ -53,6 +53,13 @@ sudo cp -rf ~/.dotfiles/Themes/Focaccia /usr/share/themes/Focaccia
 sudo tar -xzvf ~/.dotfiles/Themes/Sddm_Candy.tar.gz -C /usr/share/sddm/themes
 sudo cp -rf ~/.dotfiles/Configs/sddm/kde_settings.conf /etc/sddm.conf.d/kde_settings.conf
 
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git ~/Documents/WhiteSur-icon-theme
+cd ~/Documents/WhiteSur-icon-theme
+./install.sh -a
+./install.sh -a -t orange
+./install.sh -a -t yellow
+cd ~
+
 #Create backup
 mkdir $BACKUP_DIR
 
