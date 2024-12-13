@@ -703,7 +703,7 @@
         <command>rofi-bluetooth</command>
       </action>
     </keybind>
-    <keybind key="W-x">
+    <keybind key="W-BackSpace">
       <action name="Execute">
         <command>rofi-powermenu</command>
       </action>
