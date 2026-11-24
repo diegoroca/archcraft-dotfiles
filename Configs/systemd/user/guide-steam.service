@@ -1,0 +1,13 @@
+[Unit]
+Description=Abrir Steam con el botón Guide del mando
+
+[Service]
+ExecStart=/usr/bin/python3 %h/.local/bin/guide-steam.py
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=3
+# No matar Steam si se reinicia/para el servicio
+KillMode=process
+
+[Install]
+WantedBy=default.target
