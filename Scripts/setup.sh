@@ -140,15 +140,19 @@ run systemctl --user daemon-reload
 run systemctl --user enable --now guide-steam.service
 
 step "reboot-windows (reiniciar directo en Windows)"
-run sudo install -Dm755 "$DOTFILES_DIR/Scripts/system/efi-next-windows" /usr/local/bin/efi-next-windows
-SUDOERS_TMP=$(mktemp)
-echo "$USER ALL=(root) NOPASSWD: /usr/local/bin/efi-next-windows" > "$SUDOERS_TMP"
-if sudo visudo -cf "$SUDOERS_TMP" >/dev/null; then
-    run sudo install -m440 "$SUDOERS_TMP" /etc/sudoers.d/efi-next-windows
+if sudo efibootmgr 2>/dev/null | grep -q 'Windows Boot Manager'; then
+    run sudo install -Dm755 "$DOTFILES_DIR/Scripts/system/efi-next-windows" /usr/local/bin/efi-next-windows
+    SUDOERS_TMP=$(mktemp)
+    echo "$USER ALL=(root) NOPASSWD: /usr/local/bin/efi-next-windows" > "$SUDOERS_TMP"
+    if sudo visudo -cf "$SUDOERS_TMP" >/dev/null; then
+        run sudo install -m440 "$SUDOERS_TMP" /etc/sudoers.d/efi-next-windows
+    else
+        warn "regla de sudoers inválida, no se instaló"
+    fi
+    rm -f "$SUDOERS_TMP"
 else
-    warn "regla de sudoers inválida, no se instaló"
+    echo "  No hay Windows en el arranque UEFI: se omite."
 fi
-rm -f "$SUDOERS_TMP"
 
 # ---------------------------------------------------------------- Final
 step "Ajustes finales"
