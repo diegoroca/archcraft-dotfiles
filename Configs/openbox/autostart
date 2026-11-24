@@ -41,6 +41,14 @@ exec thunar --daemon &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
+## keyd: atajos macOS por aplicación (Cmd+C/V en terminales, etc.)
+## Config: ~/.config/keyd/app.conf  |  Log: ~/.cache/keyd-app-focus.log
+## (keyd-application-mapper no sirve aquí: confunde polybar con la ventana activa)
+if command -v keyd >/dev/null; then
+	pkill -f '^python3 .*/keyd-app-focus.py'
+	python3 ~/.local/bin/keyd-app-focus.py > ~/.cache/keyd-app-focus.log 2>&1 &
+fi
+
 ## These applets are specifically for tint2 panel.
 ## If you're using tint2 as panel, Uncomment these applets.
 
