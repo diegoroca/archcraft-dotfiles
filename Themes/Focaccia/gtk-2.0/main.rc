@@ -1544,9 +1544,11 @@ style "menu_item" {
   # Chromium uses this setting
   bg[SELECTED]   = @selected_bg_color
 
+  # Texto del menú con el mismo color que la barra (polybar FOREGROUND)
+  fg[NORMAL]     = "#E0E0E0"
   fg[PRELIGHT]   = @selected_fg_color
   # Some widgets use text, we need to handle that
-  text[NORMAL]   = @fg_color
+  text[NORMAL]   = "#E0E0E0"
   text[PRELIGHT] = @selected_fg_color
 
   # Unfortunately we can't tell regular and menu checks/radios apart

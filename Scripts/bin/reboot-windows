@@ -1,0 +1,3 @@
+#!/bin/sh
+# Reinicia directamente en Windows (solo el siguiente arranque).
+sudo /usr/local/bin/efi-next-windows >/dev/null && echo "Reiniciando en Windows..." && systemctl reboot

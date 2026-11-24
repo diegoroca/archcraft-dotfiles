@@ -1,41 +1,30 @@
 # Dotfiles for Archcraft
 
-### 1. Install and update [Archcraft](https://archcraft.io/download.html) 
+### 1. Install [Archcraft](https://archcraft.io/download.html)
 
-Instructions on how to install Archcraft [here](https://wiki.archcraft.io/docs/intro/). Make sure to install Opbenbox as the window manager
+Instructions on how to install Archcraft [here](https://wiki.archcraft.io/docs/intro/). Make sure to install Openbox as the window manager, then connect the machine to the internet.
 
-After installing Archcraft connect your machine to internet and update it with the following command
-
-```bash
-$ sudo pacman -Syyu
-```
-
-### 2. Configure the packages list
-
-Enable [multilib] uncommenting the `[multilib]` line in the file `/etc/pacman.conf` at this point you can use `sudo vim` to easily edit the file.
-
-```bash
-sudo vim /etc/pacman.conf
-```
-
-Update the packages list again
-
-```bash
-sudo pacman -Sy
-```
-
-### 3. Install the ricing
-
-Finally you can reboot the machine and run the setup script
+### 2. Run the setup script
 
 ```bash
 git clone https://github.com/diegoroca/archcraft-dotfiles.git ~/.dotfiles
-cd .dotfiles/Scripts
-chmod +x setup.sh
-./setup.sh
+~/.dotfiles/Scripts/setup.sh
 ```
 
-### 4. Last Settings
+The script does everything in one go and can be re-run safely (finished steps are skipped):
+
+- Enables `[multilib]` and updates the system
+- Installs packages (pacman, AUR via `yay`, Flathub) and removes Plank and Firefox
+- Installs themes, icons, wallpaper and the SDDM login theme
+- Symlinks every config in `Configs/` into `~/.config` (anything replaced is saved in `~/.dotfiles_backup/<date>/`)
+- Applies the Neovim (NvChad) customizations
+- **macOS-style keyboard** with [keyd](https://github.com/rvaiya/keyd): left Alt = Cmd, Super = Option, Ctrl = Spaces. System config in `Configs/keyd/default.conf` (copied to `/etc/keyd/`), per-app rules in `Configs/keyd/app.conf` applied by `Scripts/bin/keyd-app-focus.py`
+- **Xbox button opens Steam** (`guide-steam` user service, with controller rumble and a notification)
+- `reboot-windows`: reboots straight into Windows once (EFI `BootNext`)
+
+Reboot when it finishes. To push changes to this repo, log in with `gh auth login`.
+
+### 3. Last Settings
 
 Google Chrome
 

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Marca Windows Boot Manager como arranque UEFI de una sola vez (BootNext).
+num=$(/usr/bin/efibootmgr | /usr/bin/sed -n "s/^Boot\([0-9A-Fa-f]\{4\}\)\* Windows Boot Manager.*/\1/p")
+[ -n "$num" ] || { echo "No encontré la entrada Windows Boot Manager" >&2; exit 1; }
+exec /usr/bin/efibootmgr --bootnext "$num"

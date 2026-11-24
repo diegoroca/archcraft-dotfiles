@@ -120,7 +120,7 @@
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="W-A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
@@ -171,13 +171,13 @@
       </action>
     </keybind>
     <!-- Action : GoToDesktop -->
-    <keybind key="W-C-Right">
+    <keybind key="C-A-W-Right">
       <action name="GoToDesktop">
         <to>next</to>
         <wrap>yes</wrap>
       </action>
     </keybind>
-    <keybind key="W-C-Left">
+    <keybind key="C-A-W-Left">
       <action name="GoToDesktop">
         <to>previous</to>
         <wrap>yes</wrap>
@@ -367,7 +367,7 @@
     <keybind key="W-Down">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
-        <width>1330</width>
+        <width>1830</width>
         <height>85%</height>
       </action>
       <action name="MoveToCenter"/>
@@ -679,7 +679,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>google-chrome-stable</command>
+        <command>flatpak run app.zen_browser.zen</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -760,6 +760,263 @@
         <command>xkill</command>
       </action>
     </keybind>
+    <!-- ######## Atajos estilo macOS (Alt = Cmd, Super = Option) ######## -->
+    <keybind key="A-space">
+      <action name="Execute">
+        <command>rofi-launcher</command>
+      </action>
+    </keybind>
+    <keybind key="A-Return">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="A-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-m">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="A-h">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="A-S-3">
+      <action name="Execute">
+        <command>ob-screenshot --now</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-4">
+      <action name="Execute">
+        <command>ob-screenshot --area</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-5">
+      <action name="Execute">
+        <command>rofi-screenshot</command>
+      </action>
+    </keybind>
+    <keybind key="A-W-Escape">
+      <action name="Execute">
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-q">
+      <action name="Execute">
+        <command>betterlockscreen --lock</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-f">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <keybind key="C-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="C-2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="C-3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="C-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="C-5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
+    <!-- Cmd+flechas: colocar ventanas (igual que Super+flechas) -->
+    <keybind key="A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>1265</width>
+      </action>
+      <action name="MoveToEdgeWest"/>
+    </keybind>
+    <keybind key="A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>1265</width>
+      </action>
+      <action name="MoveToEdgeEast"/>
+    </keybind>
+    <keybind key="A-Up">
+      <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="A-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>1830</width>
+        <height>85%</height>
+      </action>
+      <action name="MoveToCenter"/>
+    </keybind>
+    <keybind key="C-W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>1265</width>
+      </action>
+      <action name="MoveToEdgeWest"/>
+    </keybind>
+    <keybind key="C-W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>1265</width>
+      </action>
+      <action name="MoveToEdgeEast"/>
+    </keybind>
+    <keybind key="C-W-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="Maximize">
+        <direction>horizontal</direction>
+      </action>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeNorth"/>
+    </keybind>
+    <keybind key="C-W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="Maximize">
+        <direction>horizontal</direction>
+      </action>
+      <action name="MoveResizeTo">
+        <height>50%</height>
+      </action>
+      <action name="MoveToEdgeSouth"/>
+    </keybind>
+    <!-- ######## macOS: escritorios, Rectangle y extras (ver ~/.config/keyd/default.conf) ######## -->
+    <keybind key="C-A-S-W-Left">
+      <action name="SendToDesktop">
+        <to>previous</to>
+        <wrap>yes</wrap>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <keybind key="C-A-S-W-Right">
+      <action name="SendToDesktop">
+        <to>next</to>
+        <wrap>yes</wrap>
+        <follow>yes</follow>
+      </action>
+    </keybind>
+    <keybind key="C-S-1">
+      <action name="SendToDesktop">
+        <desktop>1</desktop>
+      </action>
+    </keybind>
+    <keybind key="C-S-2">
+      <action name="SendToDesktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="C-S-3">
+      <action name="SendToDesktop">
+        <desktop>3</desktop>
+      </action>
+    </keybind>
+    <keybind key="C-S-4">
+      <action name="SendToDesktop">
+        <desktop>4</desktop>
+      </action>
+    </keybind>
+    <keybind key="C-S-5">
+      <action name="SendToDesktop">
+        <desktop>5</desktop>
+      </action>
+    </keybind>
+    <keybind key="C-A-W-Up">
+      <action name="ShowMenu">
+        <menu>client-list-combined-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="C-W-Return">
+      <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="C-W-c">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>1830</width>
+        <height>85%</height>
+      </action>
+      <action name="MoveToCenter"/>
+    </keybind>
+    <keybind key="C-W-u">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="C-W-i">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="C-W-j">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="C-W-k">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="C-W-BackSpace">
+      <action name="UnmaximizeFull"/>
+    </keybind>
+    <keybind key="A-S-q">
+      <action name="Execute">
+        <command>rofi-powermenu</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow">
+        <dialog>list</dialog>
+        <bar>no</bar>
+        <raise>yes</raise>
+        <allDesktops>no</allDesktops>
+        <panels>no</panels>
+        <desktop>no</desktop>
+        <linear>no</linear>
+        <interactive>yes</interactive>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="A-F3">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
   </keyboard>
   <!-- ################################ Mouse Settings ################################ -->
   <mouse>
@@ -772,6 +1029,10 @@
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
+      <mousebind action="Press" button="W-Left">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
       <mousebind action="Drag" button="W-Left">
         <action name="Move"/>
       </mousebind>
@@ -780,7 +1041,15 @@
         <action name="Raise"/>
         <action name="Unshade"/>
       </mousebind>
+      <mousebind action="Press" button="W-Right">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
       <mousebind action="Drag" button="A-Right">
+        <action name="Resize"/>
+      </mousebind>
+      <mousebind action="Drag" button="W-Right">
         <action name="Resize"/>
       </mousebind>
     </context>
@@ -789,7 +1058,14 @@
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
+      <mousebind action="Press" button="W-Left">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
       <mousebind action="Drag" button="A-Left">
+        <action name="Move"/>
+      </mousebind>
+      <mousebind action="Drag" button="W-Left">
         <action name="Move"/>
       </mousebind>
       <mousebind action="Press" button="Left">
@@ -925,7 +1201,14 @@
         <action name="Focus"/>
         <action name="Raise"/>
       </mousebind>
+      <mousebind action="Press" button="W-Left">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
       <mousebind action="Drag" button="A-Left">
+        <action name="Move"/>
+      </mousebind>
+      <mousebind action="Drag" button="W-Left">
         <action name="Move"/>
       </mousebind>
       <mousebind action="Press" button="Left">
@@ -996,7 +1279,17 @@
           <to>previous</to>
         </action>
       </mousebind>
+      <mousebind action="Click" button="W-Up">
+        <action name="GoToDesktop">
+          <to>previous</to>
+        </action>
+      </mousebind>
       <mousebind action="Click" button="A-Down">
+        <action name="GoToDesktop">
+          <to>next</to>
+        </action>
+      </mousebind>
+      <mousebind action="Click" button="W-Down">
         <action name="GoToDesktop">
           <to>next</to>
         </action>
@@ -1019,6 +1312,11 @@
         </action>
       </mousebind>
       <mousebind action="Press" button="A-Right">
+        <action name="ShowMenu">
+          <menu>client-list-menu</menu>
+        </action>
+      </mousebind>
+      <mousebind action="Press" button="W-Right">
         <action name="ShowMenu">
           <menu>client-list-menu</menu>
         </action>

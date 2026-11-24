@@ -1,108 +1,103 @@
-2024-07-15	rc.xml KEYBINDS
--------------------------------
-
- 0	A-F1          				root-menu
- 1	A-space       				client-menu
- 2	A-S-space     				client-list-combined-menu
- 3	C-A-space     				app-menu
- 4	W-Tab         				NextWindow
- 5	A-Tab         				NextWindow
- 6	C-A-Right     				GoToDesktop
- 7	C-A-Left      				GoToDesktop
- 8	W-1           				GoToDesktop
- 9	W-2           				GoToDesktop
-10	W-3           				GoToDesktop
-11	W-4           				GoToDesktop
-12	W-5           				GoToDesktop
-13	W-equal       				AddDesktop
-14	W-minus       				RemoveDesktop
-15	W-d           				ToggleShowDesktop
-16	C-S-R         				dunstify -u low -h string:x-dunst-stack-tag:obaction "Configuration Reloaded!"
-17	C-S-BackSpace  			Restart
-18	C-A-Delete     			Exit
-19	W-S-Right     				SendToDesktop
-20	W-S-Left      				SendToDesktop
-21	S-W-1         				SendToDesktop
-22	S-W-2         				SendToDesktop
-23	S-W-3         				SendToDesktop
-24	S-W-4         				SendToDesktop
-25	S-W-5         				SendToDesktop
-26	W-A-Up        				MoveRelative
-27	W-A-Down      				MoveRelative
-28	W-A-Left      				MoveRelative
-29	W-A-Right     				MoveRelative
-30	W-C-Right     				ResizeRelative
-31	W-C-Left      				ResizeRelative
-32	W-C-Down      				ResizeRelative
-33	W-C-Up        				ResizeRelative
-34	W-A-m         				dunstify -u low -h string:x-dunst-stack-tag:obaction "Begin Interactive Moving"
-35	W-A-r         				dunstify -u low -h string:x-dunst-stack-tag:obaction "Begin Interactiv.....
-36	W-Left        				UnmaximizeFull
-37	W-Right       				UnmaximizeFull
-38	W-Up          				MaximizeFull
-39	W-Down        				UnmaximizeFull
-40	W-S-Up        				UnmaximizeFull
-41	W-S-Down      				UnmaximizeFull
-42	W-k           				Unmaximize
-43	W-S-k         				Unmaximize
-44	W-h           				Unmaximize
-45	W-S-h         				Unmaximize
-46	W-j           				Unmaximize
-47	W-S-j         				Unmaximize
-48	W-l           				Unmaximize
-49	W-S-l         				Unmaximize
-50	W-KP_1        				UnmaximizeFull
-51	W-KP_2        				UnmaximizeFull
-52	W-KP_3        				UnmaximizeFull
-53	W-KP_4        				UnmaximizeFull
-54	W-KP_5        				MaximizeFull
-55	W-KP_6        				UnmaximizeFull
-56	W-KP_7        				UnmaximizeFull
-57	W-KP_8        				UnmaximizeFull
-58	W-KP_9        				UnmaximizeFull
-59	W-c           				Close
-60	W-q           				Close
-61	A-F4          				Close
-62	W-m           				Iconify
-63	A-F6          				ToggleMaximize
-64	A-F7          				ToggleShade
-65	A-F8          				ToggleDecorations
-66	A-F9          				ToggleOmnipresent
-67	A-F10         				ToggleFullscreen
-68	A-F11         				ToggleAlwaysOnTop
-69	A-F12         				ToggleAlwaysOnBottom
-70	Print         				ob-screenshot --now
-71	A-Print       				ob-screenshot --in5
-72	S-Print       				ob-screenshot --in10
-73	C-Print       				ob-screenshot --win
-74	W-Print       				ob-screenshot --area
-75	XF86MonBrightnessUp	ob-brightness --inc
-76	XF86MonBrightnessDown	ob-brightness --dec
-77	XF86AudioRaiseVolume	ob-volume --inc
-78	XF86AudioLowerVolume	ob-volume --dec
-79	XF86AudioMute  			ob-volume --toggle
-80	XF86AudioMicMute	ob-volume --toggle-mic
-81	XF86AudioStop  			mpc stop
-82	XF86AudioPlay  			mpc toggle
-83	XF86AudioPrev  			mpc prev
-84	XF86AudioNext  			mpc next
-85	W-Return      				alacritty
-86	W-f           				thunar
-87	W-w           				firefox
-88	W-e           				geany
-89	W-space       				rofi-launcher
-90	W-n           				networkmanager_dmenu
-91	W-b           				rofi-bluetooth
-92	W-v           				rofi-music
-93	W-x           				rofi-powermenu
-94	W-s           				rofi-screenshot
-95	W-r           				rofi-runner
-96	C-A-t         				xfce4-terminal
-97	C-A-v         				alacritty -e vim
-98	C-A-r         				alacritty -e ranger
-99	C-A-h         				alacritty -e htop
-100	C-A-l         				betterlockscreen --lock
-101	W-t           				ob-furminal
-102	W-p           				ob-colorpicker
-103	C-A-m         				ob-music
-104	W-Escape      				xkill
+o A-F1            	root-menu
+o A-space         	client-menu
+o A-S-space       	client-list-combined-menu
+o C-A-space       	app-menu
+o W-Tab           	NextWindow
+o A-Tab           	NextWindow
+o W-C-Right       	GoToDesktop
+o W-C-Left        	GoToDesktop
+o W-1             	GoToDesktop
+o W-2             	GoToDesktop
+o W-3             	GoToDesktop
+o W-4             	GoToDesktop
+o W-5             	GoToDesktop
+o W-equal         	AddDesktop
+o W-minus         	RemoveDesktop
+o W-d             	ToggleShowDesktop
+x C-S-R           	dunstify -u low -h string:x-dunst-stack-tag:obaction "Configuration Reloaded!"
+o C-S-BackSpace   	Restart
+o C-A-Delete      	Exit
+o W-S-Right       	SendToDesktop
+o W-S-Left        	SendToDesktop
+o S-W-1           	SendToDesktop
+o S-W-2           	SendToDesktop
+o S-W-3           	SendToDesktop
+o S-W-4           	SendToDesktop
+o S-W-5           	SendToDesktop
+o C-A-Up          	MoveRelative
+o C-A-Down        	MoveRelative
+o C-A-Left        	MoveRelative
+o C-A-Right       	MoveRelative
+o W-A-Right       	ResizeRelative
+o W-A-Left        	ResizeRelative
+o W-A-Down        	ResizeRelative
+o W-A-Up          	ResizeRelative
+x W-A-m           	dunstify -u low -h string:x-dunst-stack-tag:obaction "Begin Interactive Moving"
+x W-A-r           	dunstify -u low -h string:x-dunst-stack-tag:obaction "Begin Interactive Resizing"
+o W-Left          	UnmaximizeFull
+o W-Right         	UnmaximizeFull
+o W-Up            	MaximizeFull
+o W-Down          	UnmaximizeFull
+o W-S-Up          	UnmaximizeFull
+o W-S-Down        	UnmaximizeFull
+o W-k             	Unmaximize
+o W-S-k           	Unmaximize
+o W-h             	Unmaximize
+o W-S-h           	Unmaximize
+o W-j             	Unmaximize
+o W-S-j           	Unmaximize
+o W-l             	Unmaximize
+o W-S-l           	Unmaximize
+o W-KP_1          	UnmaximizeFull
+o W-KP_2          	UnmaximizeFull
+o W-KP_3          	UnmaximizeFull
+o W-KP_4          	UnmaximizeFull
+o W-KP_5          	MaximizeFull
+o W-KP_6          	UnmaximizeFull
+o W-KP_7          	UnmaximizeFull
+o W-KP_8          	UnmaximizeFull
+o W-KP_9          	UnmaximizeFull
+o W-c             	Close
+o W-q             	Close
+o A-F4            	Close
+o W-m             	Iconify
+o A-F6            	ToggleMaximize
+o A-F7            	ToggleShade
+o A-F8            	ToggleDecorations
+o A-F9            	ToggleOmnipresent
+o A-F10           	ToggleFullscreen
+o A-F11           	ToggleAlwaysOnTop
+o A-F12           	ToggleAlwaysOnBottom
+x Print           	ob-screenshot --now
+x A-Print         	ob-screenshot --in5
+x S-Print         	ob-screenshot --in10
+x C-Print         	ob-screenshot --win
+x W-Print         	ob-screenshot --area
+x XF86MonBrightnessUp	ob-brightness --inc
+x XF86MonBrightnessDown	ob-brightness --dec
+x XF86AudioRaiseVolume	ob-volume --inc
+x XF86AudioLowerVolume	ob-volume --dec
+x XF86AudioMute   	ob-volume --toggle
+x XF86AudioMicMute	ob-volume --toggle-mic
+x XF86AudioStop   	mpc stop
+x XF86AudioPlay   	mpc toggle
+x XF86AudioPrev   	mpc prev
+x XF86AudioNext   	mpc next
+x W-Return        	alacritty
+x W-f             	thunar
+x W-w             	flatpak run app.zen_browser.zen
+x W-e             	geany
+x W-space         	rofi-launcher
+x W-n             	networkmanager_dmenu
+x W-b             	rofi-bluetooth
+x W-BackSpace     	rofi-powermenu
+x W-s             	rofi-screenshot
+x C-A-t           	xfce4-terminal
+x C-A-v           	alacritty -e vim
+x C-A-r           	alacritty -e ranger
+x C-A-h           	alacritty -e htop
+x C-A-l           	betterlockscreen --lock
+x W-t             	ob-furminal
+x W-p             	ob-colorpicker
+x C-A-m           	ob-music
+x W-Escape        	xkill
