@@ -32,7 +32,7 @@ exec dunst &
 exec mpd &
 
 ## Launch Plank
-exec plank &
+#exec plank &
 
 ## Thunar Daemon
 exec thunar --daemon &
